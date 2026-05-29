@@ -40,10 +40,10 @@ trabalho01-redes/
 ├── analise_estatistica/               # Análise de Dados e Geração de Gráficos
 │   └── analise_colab.ipynb            # Notebook Jupyter/Google Colab para processamento visual
 │
-└── relatorio_sbc/                     # Relatório no formato de Artigo Científico
-    ├── main.tex                       # Artigo principal em LaTeX (Template SBC)
-    ├── sbc-template.sty               # Estilo oficial de publicações da SBC
-    └── figuras/                       # Figuras e gráficos exportados para o artigo LaTeX
+└── relatorio_sbc/                     # Relatório no formato de Artigo Científico (SBC)
+    ├── relatorio_trabalho01_redes_mestrado_carlos_ofc.pdf  # Artigo final em PDF (Validação Cruzada)
+    └── figuras/                       # Figuras e gráficos de redes exportados para o artigo
+
 ```
 
 ---
@@ -141,32 +141,7 @@ A pasta `analise_estatistica/` contém o notebook [analise_colab.ipynb](file:///
 Para rodar localmente:
 1. Abra seu ambiente Jupyter ou VS Code.
 2. Carregue o notebook e execute todas as células (`Run All`).
-3. O notebook processará as planilhas da pasta `dados_e_logs/processados/` e salvará os gráficos no formato `.pdf` e `.png` diretamente dentro da pasta de figuras do artigo LaTeX `relatorio_sbc/figuras/`.
-
----
-
-## 📝 Compilando o Relatório Acadêmico (LaTeX)
-
-O relatório está escrito em LaTeX seguindo estritamente as regras de estilo de publicação da SBC. Para compilá-lo localmente (caso tenha o `texlive` instalado):
-```powershell
-cd relatorio_sbc
-pdflatex main.tex
-bibtex main.aux     # caso utilize citações externas
-pdflatex main.tex
-```
-Você também pode carregar os arquivos de `relatorio_sbc/` no **Overleaf** para edição colaborativa e compilação em nuvem.
-
----
-
-## 📹 Roteiro Sugerido para o Vídeo de 30 minutos
-
-O trabalho exige um vídeo técnico demonstrativo. Aqui está uma divisão sugerida de tempo para garantir nota máxima nos critérios de apresentação:
-
-1. **Minutos 00:00 - 05:00 (Apresentação e Visão Geral):** Introdução pessoal (Carlos Henrique), explicação conceitual dos sockets R-UDP com janela deslizante Go-Back-N e o cabeçalho personalizado `X-Custom-Auth` contendo a matrícula e nome.
-2. **Minutos 05:00 - 10:00 (Código-Fonte da Fase 1):** Demonstração rápida das classes no arquivo [rudp_protocol.py](file:///c:/Users/Carlos Vale/Documents/02 mestrado - ciencias da computação/redes de computadores/trabalhos/trabalho01-redes/fase1_real/rudp_protocol.py). Mostre o empacotamento com `struct`, a thread que ouve ACKs de forma paralela e o tratamento de timeout.
-3. **Minutos 10:00 - 15:00 (Demonstração do Docker e Sockets):** Apresente o terminal, suba o docker-compose e execute um dos scripts de cenário (ex: `cenario_b.sh` com 10% de perda). Mostre a aplicação rodando, calculando o throughput final e o tcpdump gerando os arquivos PCAP.
-4. **Minutos 15:00 - 20:00 (Estrutura do Simulador SimPy):** Abra o arquivo [simulador.py](file:///c:/Users/Carlos Vale/Documents/02 mestrado - ciencias da computação/redes de computadores/trabalhos/trabalho01-redes/fase2_simulacao/simulador.py) e explique como os atrasos e perdas estocásticas foram modelados no SimPy (distribuições Normal e Bernoulli).
-5. **Minutos 20:00 - 30:00 (Apresentação dos Gráficos e Artigo):** Mostre os gráficos gerados no notebook (ou direto no relatório LaTeX compile). Explique os resultados físicos: por que o TCP Reno sofre tanto em perdas altas (sawtooth da cwnd), a explosão de retransmissões do R-UDP e a validação do intervalo de confiança de 95% do simulador.
+3. O notebook processará as planilhas da pasta `dados_e_logs/processados/` e salvará os gráficos no formato `.pdf` diretamente dentro da pasta de figuras do artigo LaTeX `relatorio_sbc/figuras/`.
 
 ---
 
