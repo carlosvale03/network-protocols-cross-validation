@@ -1,0 +1,7 @@
+cenario,protocolo,delay_configurado_ms,rtt_teorico_ms,rtt_medio_simulado_ms,rtt_desvio_simulado_ms,rtt_min_ms,rtt_max_ms,diferenca_pct,n_execucoes
+A,TCP,10,20,22.7733,0.0274,22.721,22.8376,13.87,30
+A,R-UDP,10,20,20.7044,0.0223,20.6572,20.7524,3.52,30
+B,TCP,50,100,106.5949,0.1691,106.3054,106.9334,6.59,30
+B,R-UDP,50,100,107.4367,0.2411,106.7164,107.8916,7.44,30
+C,TCP,100,200,212.8692,0.5589,211.7811,213.9163,6.43,30
+C,R-UDP,100,200,214.28,0.4712,213.1049,215.1923,7.14,30

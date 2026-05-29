@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  # Servidor R-UDP (Go-Back-N) na porta 5000
+  servidor_rudp:
+    build: 
+      context: ./fase1_real
+      dockerfile: Dockerfile
+    container_name: servidor_redes
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      - net.ipv4.tcp_congestion_control=reno
+    networks:
+      - simulacao_net
+    volumes:
+      - ./dados_e_logs:/app/dados_e_logs
+      - ./fase1_real:/app
+    command: python3 servidor.py --host 0.0.0.0 --port 5000 --modo RUDP --auth "20261008479CarlosHenrique"
+
+  # Servidor TCP Nativo na porta 5001
+  # Ele roda em loop para aceitar múltiplas conexões (uma por cenário)
+  servidor_tcp:
+    build: 
+      context: ./fase1_real
+      dockerfile: Dockerfile
+    container_name: servidor_tcp_redes
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      - net.ipv4.tcp_congestion_control=reno
+    networks:
+      - simulacao_net
+    volumes:
+      - ./dados_e_logs:/app/dados_e_logs
+      - ./fase1_real:/app
+    command: python3 servidor.py --host 0.0.0.0 --port 5001 --modo TCP --auth "20261008479CarlosHenrique"
+
+  # Container do Cliente (mantido vivo para executar os cenários via docker exec)
+  cliente:
+    build: 
+      context: ./fase1_real
+      dockerfile: Dockerfile
+    container_name: cliente_redes
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    sysctls:
+      - net.ipv4.tcp_congestion_control=reno
+    depends_on:
+      - servidor_rudp
+      - servidor_tcp
+    networks:
+      - simulacao_net
+    volumes:
+      - ./dados_e_logs:/app/dados_e_logs
+      - ./fase1_real:/app
+    command: tail -f /dev/null
+
+networks:
+  simulacao_net:
+    driver: bridge

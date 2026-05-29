@@ -1,0 +1,3 @@
+protocolo,delay_ms,taxa_perda_configurada,tempo_medio_s,tempo_desvio_s,tempo_min_s,tempo_max_s,vazao_media_mbps,vazao_desvio_mbps,retransmissoes_media,retransmissoes_desvio,timeouts_media,perdas_dados_media,perdas_ack_media,previsao_tempo_s,n_execucoes
+TCP,125,0.25,66365.1525,5537.9109,56505.2743,78673.7779,0.0012,0.0001,4598.1,97.56,4116.43,3703.53,2776.0,66365.15,30
+R-UDP,125,0.25,1879.3889,50.2776,1791.2666,1976.995,0.0426,0.0011,33972.13,710.8,3399.27,11029.83,8292.53,1879.39,30

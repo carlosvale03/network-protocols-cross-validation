@@ -1,0 +1,4 @@
+cenario,delay_configurado_ms,rtt_teorico_ms,rtt_medio_observado_ms,rtt_desvio_observado_ms,rtt_min_ms,rtt_max_ms,rtt_mediana_ms,rtt_p05_ms,rtt_p95_ms,diferenca_pct,n_amostras,n_execucoes
+A,10,20,20.6999,1.3214,14.7189,27.4811,20.715,18.4901,22.8448,3.5,102400,10
+B,50,100,107.3912,10.6061,0.0031,230.8286,108.2469,94.628,118.4451,7.39,93232,10
+C,100,200,214.2646,23.6,0.1374,464.3705,215.2966,187.583,236.3357,7.13,85869,10

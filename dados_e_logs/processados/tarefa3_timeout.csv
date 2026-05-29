@@ -1,0 +1,7 @@
+cenario,protocolo,delay_ms,taxa_perda,retransmissoes_media,retransmissoes_desvio,retransmissoes_min,retransmissoes_max,timeouts_media,timeouts_desvio,n_execucoes,fast_retransmits_media,fast_retransmits_desvio
+A,TCP,10,0.0,0.0,0.0,0,0,0.0,0.0,30,0.0,0.0
+A,R-UDP,10,0.0,0.0,0.0,0,0,0.0,0.0,30,,
+B,TCP,50,0.1,1256.1,35.49,1183,1322,577.17,30.08,30,678.93,16.33
+B,R-UDP,50,0.1,11257.7,279.27,10799,11710,1126.43,27.9,30,,
+C,TCP,100,0.2,3224.73,72.71,3063,3393,2544.87,78.12,30,679.87,24.01
+C,R-UDP,100,0.2,25611.33,554.1,24813,26771,2562.47,55.29,30,,

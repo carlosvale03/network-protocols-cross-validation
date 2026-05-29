@@ -1,0 +1,32 @@
+# --- Python Caches & Linters ---
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+
+# --- Arquivos Binários de Teste (Fase 1) ---
+fase1_real/*.bin
+fase1_real/arquivo_recebido_*.bin
+fase1_real/arquivo_teste.bin
+
+# --- Fontes e Arquivos Auxiliares do LaTeX (Apenas o PDF final será enviado) ---
+relatorio_sbc/main.tex
+relatorio_sbc/main_compact.tex
+relatorio_sbc/referencias.bib
+relatorio_sbc/sbc-template.sty
+relatorio_sbc/*.aux
+relatorio_sbc/*.log
+relatorio_sbc/*.toc
+relatorio_sbc/*.out
+relatorio_sbc/*.synctex.gz
+relatorio_sbc/*.fdb_latexmk
+relatorio_sbc/*.fls
+relatorio_sbc/*.blg
+relatorio_sbc/*.bbl
+
+# --- Especificações Locais e Planejamentos ---
+avaliacao-redes-ppgcc-2026-1.md
+contexto.md
+planejamento-inicial.md
+Avaliacao Redes PPGCC  2026-1.pdf
+
