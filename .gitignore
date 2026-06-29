@@ -10,8 +10,7 @@ fase1_real/arquivo_recebido_*.bin
 fase1_real/arquivo_teste.bin
 
 # --- Fontes e Arquivos Auxiliares do LaTeX (Apenas o PDF final será enviado) ---
-relatorio_sbc/main.tex
-relatorio_sbc/main_compact.tex
+relatorio_sbc/*.tex
 relatorio_sbc/referencias.bib
 relatorio_sbc/sbc-template.sty
 relatorio_sbc/*.aux
@@ -29,4 +28,4 @@ avaliacao-redes-ppgcc-2026-1.md
 contexto.md
 planejamento-inicial.md
 Avaliacao Redes PPGCC  2026-1.pdf
-
+
